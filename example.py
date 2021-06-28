@@ -1,5 +1,5 @@
 from pyflipt import get_client
-from pyflipt import Flag, Segment, Constraint, Rule, ComparisonType, MatchType
+from pyflipt import Flag, Segment, Constraint, Rule, ComparisonType, MatchType, OperatorType
 import asyncio
 
 
@@ -17,9 +17,9 @@ async def main():
         await pf.create(segment)
 
     constraints = [
-        Constraint(segment_key="user", type=ComparisonType.STRING.value, operator="==", value="test.admin@onna.com"),
-        Constraint(key="datasource_uuid", type=ComparisonType.STRING.value, operator="==", value="foobar"),
-        Constraint(key="account", type=ComparisonType.STRING.value, operator="==", value="account1"),
+        Constraint(segment_key="user", type=ComparisonType.STRING.value, operator=OperatorType.EQ, value="test.admin@onna.com"),
+        Constraint(key="datasource_uuid", type=ComparisonType.STRING.value, operator=OperatorType.EQ, value="foobar"),
+        Constraint(key="account", type=ComparisonType.STRING.value, operator=OperatorType.EQ, value="account1"),
     ]
     for constraint in constraints:
         await pf.create(constraint)
