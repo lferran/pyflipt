@@ -7,9 +7,9 @@ Python asyncio client for Flipt rest api
 ## Supports
 
  - [x] Creating and deleting objects: Flags, Segments, Constraints, Rules
- - [] Support for Distributions and Variants
- - [] Updating objects
- - [] Listing
- - [] Evaluate
+ - [ ] Support for Distributions and Variants
+ - [ ] Updating objects
+ - [ ] Listing
+ - [ ] Evaluate
  - [x] Order rules
- - [] Getting objects
+ - [ ] Getting objects
