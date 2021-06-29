@@ -32,4 +32,12 @@ test:
 coverage: install-dev
 	$(POETRY) run pytest tests --cov=$(name)
 
+version:
+	$(POETRY) version $(version)
+
+release:
+	# can only support wheels here
+	$(POETRY) build -f wheel
+	$(POETRY) run twine upload dist/*
+
 .PHONY: clean install install-dev test
