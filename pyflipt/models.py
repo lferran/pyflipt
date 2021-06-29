@@ -1,6 +1,7 @@
-from pydantic import BaseModel
-from typing import Optional, Dict
 from enum import Enum
+from typing import Dict, Optional
+
+from pydantic import BaseModel
 
 
 class FliptBasicUnit(BaseModel):

@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "pyflipt"
+version = "0.1.0"
+description = ""
+authors = ["Ferran Llamas <llamas.arroniz@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pydantic = "^1.8.2"
+aiohttp = "^3.7.4"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.3"
+pytest-asyncio = "^0.14.0"
+black = "^20.8b1"
+flake8 = "^3.9.0"
+isort = "^5.8.0"
+mypy = "^0.812"
+pdbpp = "^0.10.2"
+pytest-coverage = "^0.0"
+requests = "^2.25.1"
+ipython = "^7.23.1"
+python-language-server = "^0.34.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

@@ -1,2 +1,2 @@
-from .models import *  # noqa
 from .client import *  # noqa
+from .models import *  # noqa
