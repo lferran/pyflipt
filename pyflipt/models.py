@@ -19,9 +19,10 @@ class Rule(FliptBasicUnit):
     flag_key: str
     segment_key: str
     rank: int
+    id: Optional[str]
 
 
-class MatchType(Enum):
+class MatchType(str, Enum):
     ALL = "ALL_MATCH_TYPE"
     ANY = "ANY_MATCH_TYPE"
 
@@ -33,14 +34,14 @@ class Segment(FliptBasicUnit):
     match_type: MatchType = MatchType.ALL.value
 
 
-class ComparisonType(Enum):
+class ComparisonType(str, Enum):
     UNKNOWN = "UNKNOWN_COMPARISON_TYPE"
     STRING = "STRING_COMPARISON_TYPE"
     NUMBER = "NUMBER_COMPARISON_TYPE"
     BOOLEAN = "BOOLEAN_COMPARISON_TYPE"
 
 
-class OperatorType(Enum):
+class OperatorType(str, Enum):
     EQ = "=="
     NEQ = "!="
     IS_EMPTY = "IS EMPTY"
